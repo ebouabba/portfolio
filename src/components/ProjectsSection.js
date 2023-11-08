@@ -11,7 +11,8 @@ const projects = [
      incoming requests from clients over the internet or a local network When a client
      such as a web browser sends a request for a webpage the web server receives
      the request processes it and sends back the requested webpage as a response.
-     `, 
+     `,
+     url: "https://github.com/ebouabba/WEBSERV",
    getImageSrc: () => require("../images/img1.jpg"), 
  }, 
  { 
@@ -21,6 +22,7 @@ const projects = [
      The setup includes integrating a MariaDB database for efficient data storage and retrieval. By
      utilizing Docker, the project aims to streamline deployment and management processes,
      making it easier to maintain a consistent and isolated development environment.`, 
+     url: "https://github.com/ebouabba/INCEPTION",
    getImageSrc: () => require("../images/img2.jpg"), 
  }, 
  { 
@@ -29,6 +31,7 @@ const projects = [
      `Cub3D is a project that challenges students to build a 3D graphics engine
      from scratch using the C programming language. The primary objective
      is to render a 3D-like environment on a 2D screen, creating the illusion of depth and movement.`, 
+     url: "https://github.com/ebouabba/CUB3D",
    getImageSrc: () => require("../images/img3.png"), 
  }, 
  { 
@@ -37,8 +40,9 @@ const projects = [
     `This project is about creating a website for the mighty Pong contest!
     with live chat and authentication with Nextjs, Nestjs Frameworks, and PostgreSQL
     database`,
+    url: "https://github.com/ebouabba/#",
    getImageSrc: () => require("../images/img4.webp"), 
- }, 
+ },
 ]; 
  
 const ProjectsSection = () => { 
@@ -62,8 +66,8 @@ const ProjectsSection = () => {
          <Card 
            key={project.title} 
            title={project.title} 
-           description={project.description} 
-           url="https://github.com/rgommezz/react-native-offline" 
+           description={project.description}
+           url={project.url}
            imageSrc={project.getImageSrc()} 
          /> 
        ))} 
